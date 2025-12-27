@@ -2,10 +2,7 @@ class Rectangulo {
   int base = 0;
   int altura = 0;
 
-  Rectangulo(int base, int altura) {
-    this.base = base;
-    this.altura = altura;
-  }
+  Rectangulo(this.base, this.altura) {}
 
   int calcularArea() {
     return (base * altura);

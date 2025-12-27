@@ -3,11 +3,7 @@ class Persona {
   int edad = 0;
   double? estatura;
 
-  Persona(String nombre, int edad, double estatura) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.estatura = estatura;
-  }
+  Persona(this.nombre, this.edad, this.estatura) {}
 }
 
 void main() {
