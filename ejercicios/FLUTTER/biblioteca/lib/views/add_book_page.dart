@@ -32,6 +32,7 @@ class _AddBookPageState extends State<AddBookPage> {
               controller: authorController,
               decoration: const InputDecoration(labelText: "Autor"),
             ),
+            const SizedBox(height: 20),
             DropdownButton<String>(
               value: status,
               items: [

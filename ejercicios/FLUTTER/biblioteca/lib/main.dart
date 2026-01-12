@@ -1,3 +1,5 @@
+import 'package:biblioteca/views/add_book_page.dart';
+import 'package:biblioteca/views/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: "Biblioteca Demo",
+      home: const HomePage(),
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
+      routes: {'/add': (context) => const AddBookPage()},
     );
   }
 }
