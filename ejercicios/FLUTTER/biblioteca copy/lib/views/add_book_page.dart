@@ -51,7 +51,7 @@ class _AddBookPageState extends State<AddBookPage> {
             ElevatedButton(
               onPressed: () async {
                 final book = Book(
-                  id: DateTime.now().millisecondsSinceEpoch,
+                  id: "",
                   title: titleController.text,
                   author: authorController.text,
                   status: status,
