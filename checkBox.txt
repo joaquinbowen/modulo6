@@ -1,0 +1,42 @@
+class Pelicula {
+  final int id;
+  final String titulo;
+  final String descripcion;
+  final bool vista; // 👈 ESTA ES LA CLAVE
+
+  Pelicula({
+    required this.id,
+    required this.titulo,
+    required this.descripcion,
+    required this.vista,
+  });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'titulo': titulo,
+      'descripcion': descripcion,
+      'vista': vista ? 1 : 0, // SQLite no tiene boolean
+    };
+  }
+
+  factory Pelicula.fromMap(Map<String, dynamic> map) {
+    return Pelicula(
+      id: map['id'],
+      titulo: map['titulo'],
+      descripcion: map['descripcion'],
+      vista: map['vista'] == 1,
+    );
+  }
+}
+
+
+CheckboxListTile(
+  title: const Text("Ya vi esta película"),
+  value: _vista,
+  onChanged: (bool? value) {
+    setState(() {
+      _vista = value ?? false;
+    });
+  },
+)
