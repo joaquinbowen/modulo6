@@ -83,4 +83,5 @@ class DefaultFirebaseOptions {
     authDomain: 'biblioteca-7c40f.firebaseapp.com',
     storageBucket: 'biblioteca-7c40f.firebasestorage.app',
   );
+
 }
